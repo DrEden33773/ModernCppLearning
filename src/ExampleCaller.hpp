@@ -14,6 +14,9 @@
 namespace ModernCppLearning {
 
 void ExampleCaller() {
+    std::cout << "Successfully called all examples!"
+              << std::endl
+              << std::endl;
 }
 
 }
