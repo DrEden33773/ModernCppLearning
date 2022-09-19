@@ -10,13 +10,21 @@
  */
 
 #include "Constant/Nullptr.hpp"
+#include "Variable/InitList.hpp"
 
 namespace ModernCppLearning {
 
+inline void Call_InitList() {
+    InitList::example();
+    std::cout << std::endl;
+}
+
 void ExampleCaller() {
+    Call_InitList();
+
     std::cout << "Successfully called all examples!"
               << std::endl
               << std::endl;
 }
 
-}
+} // namespace ModernCppLearning

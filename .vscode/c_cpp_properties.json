@@ -9,7 +9,7 @@
             "compilerPath": "/usr/sbin/clang",
             "intelliSenseMode": "linux-clang-x64",
             "cStandard": "c17",
-            "cppStandard": "gnu++23"
+            "cppStandard": "gnu++20"
         }
     ],
     "version": 4
