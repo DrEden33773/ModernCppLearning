@@ -9,8 +9,8 @@
  *
  */
 
-#include "Constant/Nullptr.hpp"
-#include "Variable/InitList.hpp"
+#include "Usability/Constant/Nullptr.hpp"
+#include "Usability/Variable/InitList.hpp"
 
 namespace ModernCppLearning {
 
