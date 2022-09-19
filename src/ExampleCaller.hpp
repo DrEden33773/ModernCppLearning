@@ -9,7 +9,8 @@
  *
  */
 
-#include "Usability/Constant/Nullptr.hpp"
+// #include "Usability/Constant/Nullptr.hpp"
+#include "Usability/Template/VariadicTemplate.hpp"
 #include "Usability/Variable/InitList.hpp"
 
 namespace ModernCppLearning {
@@ -19,12 +20,16 @@ inline void Call_InitList() {
     std::cout << std::endl;
 }
 
+inline void Call_VariadicTemplate() {
+    VariadicTemplate::example();
+    std::cout << std::endl;
+}
+
 void ExampleCaller() {
     Call_InitList();
+    Call_VariadicTemplate();
 
-    std::cout << "Successfully called all examples!"
-              << std::endl
-              << std::endl;
+    std::cout << "Successfully called all examples!" << std::endl;
 }
 
 } // namespace ModernCppLearning
