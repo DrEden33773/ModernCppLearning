@@ -15,7 +15,7 @@ struct InitList {
     class MagicFoo {
     public:
         std::vector<int> vec;
-        MagicFoo(std::initializer_list<int> list) {
+        MagicFoo(std::initializer_list<int>&& list) {
             // attention! all elements in the initializer_list is `const`
             for (auto it : list) {
                 vec.push_back(it);

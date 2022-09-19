@@ -20,17 +20,14 @@ inline void Call_InitList() {
     InitList::example();
     std::cout << std::endl;
 }
-
 inline void Call_VariadicTemplate() {
     VariadicTemplate::example();
     std::cout << std::endl;
 }
-
 inline void Call_FoldExpression() {
     FoldExpression::example();
     std::cout << std::endl;
 }
-
 inline void _success_() {
     std::cout << "Successfully called all examples!" << std::endl;
 }
