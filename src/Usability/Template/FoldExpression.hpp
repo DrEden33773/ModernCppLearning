@@ -29,6 +29,7 @@ public:
     static void example() {
         FoldExpression TestObj;
 
+        // call r_ref method
         auto result1 = TestObj.sum(1, 2.0, 3.1);
         std::cout << "1 + 2.0 + 3.1 = " << result1;
         std::cout << std::endl
@@ -38,11 +39,13 @@ public:
         float b = 2.0;
         float c = 3.1;
 
+        // call l_ref method
         auto result2 = TestObj.sum(a, b, c);
         std::cout << "a(1) + b(2.0) + c(3.1) = " << result2;
         std::cout << std::endl
                   << std::endl;
 
+        // call r_ref method
         auto result3 = TestObj.sum(a, b, 3.1);
         std::cout << "a(1) + b(2.0) + 3.1 = " << result3;
         std::cout << std::endl
