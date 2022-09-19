@@ -1,0 +1,18 @@
+[
+  {
+    "directory": "/home/eden/CppProjects/ModernCppLearning",
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-Qunused-arguments",
+      "-m64",
+      "-g",
+      "-O0",
+      "-std=gnu++2b",
+      "-o",
+      "build/.objs/ModernCppLearning/linux/x86_64/debug/src/main.cpp.o",
+      "src/main.cpp"
+    ],
+    "file": "src/main.cpp"
+  }
+]
