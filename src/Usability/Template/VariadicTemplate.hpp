@@ -49,14 +49,46 @@ class VariadicTemplate {
         std::cout << only << " ";
     }
 
+    template <typename T, typename... Ar>
+    auto showInputVar_withLambda(T& first, Ar&... rest) {
+        std::cout << first << " ";
+        (void)std::initializer_list<T> {
+            (
+                [&rest] {
+                    std::cout << rest << " ";
+                }(),
+                first
+            )...
+        };
+    }
+
+    template <typename T, typename... Ar>
+    auto showInputVar_withLambda(T&& first, Ar&&... rest) {
+        std::cout << first << " ";
+        (void)std::initializer_list<T> {
+            (
+                [&rest] {
+                    std::cout << rest << " ";
+                }(),
+                first
+            )...
+        };
+    }
+
 public:
     static void example() {
         VariadicTemplate TestObj;
 
-        TestObj.showInputVar(12, 2.3, "fas", 'a'); // will call right_reference method
+        TestObj.showInputVar(12, 2.3, "fas", 'a');
+        // will call right_reference method
         std::cout << std::endl;
 
-        TestObj.showInputVar_another(12, 2.3, "fas", 'a'); // will call right_reference method
+        TestObj.showInputVar_another(12, 2.3, "fas", 'a');
+        // will call right_reference method
+        std::cout << std::endl;
+
+        TestObj.showInputVar_withLambda(12, 2.3, "fas", 'a');
+        // will call right_reference method
         std::cout << std::endl;
 
         int first         = 12;
@@ -64,10 +96,16 @@ public:
         std::string third = "fas";
         char fourth       = 'a';
 
-        TestObj.showInputVar(first, second, third, fourth); // will call left_reference method
+        TestObj.showInputVar(first, second, third, fourth);
+        // will call left_reference method
         std::cout << std::endl;
 
-        TestObj.showInputVar_another(first, second, third, fourth); // will call left_reference method
+        TestObj.showInputVar_another(first, second, third, fourth);
+        // will call left_reference method
+        std::cout << std::endl;
+
+        TestObj.showInputVar_withLambda(first, second, third, fourth);
+        // will call left_reference method
         std::cout << std::endl;
     }
 };
