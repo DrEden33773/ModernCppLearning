@@ -15,7 +15,7 @@ class CalcAvrg {
 private:
     template <typename... Ar>
     auto getAverage(Ar&&... Args) const /* -> decltype((Args + ...) / sizeof...(Args)) */
-    {                                   // return type could be automatically determined by compiler
+    {
         return ((Args + ...) / sizeof...(Args));
     }
 
