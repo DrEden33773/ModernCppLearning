@@ -107,5 +107,7 @@ public:
         TestObj.showInputVar_withLambda(first, second, third, fourth);
         // will call left_reference method
         std::cout << std::endl;
+
+        std::cout << std::endl;
     }
 };
