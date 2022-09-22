@@ -37,5 +37,7 @@ public:
         std::cout << rv2 << std::endl; // string,string,string,Test
 
         reference(rv2); // 输出左值
+
+        // rv2 虽然引用了一个右值，但由于它是一个引用，所以 rv2 依然是一个左值
     }
 };
