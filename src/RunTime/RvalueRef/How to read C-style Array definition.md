@@ -166,13 +166,16 @@ int (*(*v)[])();
 ```cpp
 int funcA() { return 1; }
 int funcB() { return 2; }
+int (*funcPtr)();
 
 int (*(*v)[])();
-int (*funcPtr)() arr[] = { &funcA, &funcB };
+decltype(&funcA) arr[] = { &funcA, &funcB };
 v = &arr;
 
 int main() {
-    int left  = (*v)[0]() + (*v)[1];
+    int one   = (*v)[0]();
+    int two   = (*v)[1]();
+    int left  = one + two;
     int right = 3;
     if ( left != right ) {
         exit(-1);
