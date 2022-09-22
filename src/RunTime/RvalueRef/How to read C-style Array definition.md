@@ -166,11 +166,9 @@ int (*(*v)[])();
 ```cpp
 int funcA() { return 1; }
 int funcB() { return 2; }
-int (*funcPtr)();
 
-int (*(*v)[])();
 decltype(&funcA) arr[] = { &funcA, &funcB };
-v = &arr;
+int (*(*v)[])()        = &arr;
 
 int main() {
     int one   = (*v)[0]();
@@ -186,3 +184,27 @@ int main() {
 ```
 
 这个程序最终的结果是`在控制台上输出 success!`
+
+## What should you write in Modern C++ (the upper example) ?
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int funcA() { return 1; }
+int funcB() { return 2; }
+array<decltype(&funcA), 2> arr = { &funcA, &funcB };
+auto v = &arr;
+
+int main() {
+    int one   = (*v)[0]();
+    int two   = (*v)[1]();
+    int left  = one + two;
+    int right = 3;
+    if ( left != right ) {
+        exit(-1);
+    }
+    printf("success!\n");
+    return 0;
+}
+```
