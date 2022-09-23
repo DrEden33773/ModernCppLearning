@@ -9,7 +9,7 @@
  *
  */
 
-#include <bits/stdc++.h>
+#include "../../ToInclude.h"
 
 struct TempVarInIf {
     static void example() {

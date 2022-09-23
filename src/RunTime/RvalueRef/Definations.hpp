@@ -9,9 +9,7 @@
  *
  */
 
-#include <bits/stdc++.h>
-#include <cstdio>
-#include <vector>
+#include "../../ToInclude.h"
 
 class Definations {
 private:

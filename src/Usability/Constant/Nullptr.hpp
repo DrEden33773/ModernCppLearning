@@ -1,8 +1,6 @@
 ﻿/// @brief nullptr
 
-#include <iostream>
-#include <memory>
-#include <type_traits>
+#include "../../ToInclude.h"
 
 struct NullptrEG {
     NullptrEG() {

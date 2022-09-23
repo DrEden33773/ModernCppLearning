@@ -9,7 +9,7 @@
  *
  */
 
-#include <bits/stdc++.h>
+#include "../../ToInclude.h"
 
 template class std::vector<int>;
 template class std::vector<float>;

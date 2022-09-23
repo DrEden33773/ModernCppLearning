@@ -9,7 +9,7 @@
  *
  */
 
-#include <bits/stdc++.h>
+#include "../../ToInclude.h"
 
 struct StructureBind {
     static void example() {
