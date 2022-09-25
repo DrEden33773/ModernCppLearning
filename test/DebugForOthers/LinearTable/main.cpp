@@ -9,7 +9,10 @@
  *
  */
 
-#include <bits/stdc++.h>
+#include <cstdlib>
+#include <ctime>
+#include <fstream>
+#include <iostream>
 using namespace std;
 
 class ArraySolution {
@@ -38,7 +41,9 @@ private:
         if (!srcFile.is_open()) {
             throw std::runtime_error("error opening source file.");
         }
-        data    = new int(numOfNums);
+        data = new int[numOfNums]; // if you want to init an array, use new[] instead of new()
+                                   // new type(a) => bind `a` to ptr
+                                   // new type[num] => bind the array(len=num) to ptr
         int POS = 0;
         while (srcFile >> tmp) {
             data[POS] = tmp;
@@ -80,7 +85,7 @@ public:
         delete[] data;
     }
 
-    static void Solution(const char* filename = "./data.txt") {
+    static void Solution(const char* filename = "data.txt") {
         ArraySolution toOperateObj(filename);
         cout << "This is ArraySolution" << endl;
         cout << endl;
@@ -148,6 +153,7 @@ private:
                 }
                 TMP = TMP->prev;
             }
+            tail->next = nullptr;
         }
 
         void echo(bool ifReversed = false) {
@@ -160,6 +166,7 @@ private:
             }
             while (tmp != nullptr) {
                 cout << tmp->data << " -> ";
+                tmp = tmp->next;
             }
             cout << "\b\b\b\b    \b\b\b\b";
             cout << endl;
@@ -225,11 +232,13 @@ public:
 
     LinkedListSolution(const char* filename) {
         initLinkedList();
+        cout << "This is LinkedList Solution" << endl;
+        cout << endl;
         makeSureFileIsNotEmpty(filename);
         toStoreData(filename);
     }
 
-    static void Solution(const char* filename = "./data.txt") {
+    static void Solution(const char* filename = "data.txt") {
         LinkedListSolution toOperateObj(filename);
         toOperateObj.originalOrderEcho();
         toOperateObj.reverseOrderEcho();
@@ -237,6 +246,28 @@ public:
 };
 
 int main() {
+    fstream newFile("data.txt", ios::app);
+    if (!newFile.is_open()) {
+        throw std::runtime_error("cannot init new file!");
+    }
+    newFile.close();
+
+    fstream theFile("data.txt", ios::out);
+    if (!theFile.is_open()) {
+        throw std::runtime_error("cannot init new file!");
+    }
+    srand(time(nullptr));
+    for (int i = 0; i < 10; ++i) {
+        int tmp = rand() % 100 - 1;
+        theFile << tmp << " ";
+    }
+    theFile.close();
+
     ArraySolution::Solution();
+
+    cout << endl
+         << endl
+         << endl;
+
     LinkedListSolution::Solution();
 }
