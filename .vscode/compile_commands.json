@@ -2,13 +2,12 @@
   {
     "directory": "/home/eden/CppProjects/ModernCppLearning",
     "arguments": [
-      "/usr/bin/clang",
+      "/usr/sbin/gcc",
       "-c",
-      "-Qunused-arguments",
       "-m64",
       "-g",
       "-O0",
-      "-std=gnu++20",
+      "-std=gnu++23",
       "-o",
       "build/.objs/ModernCppLearning/linux/x86_64/debug/src/main.cpp.o",
       "src/main.cpp"
