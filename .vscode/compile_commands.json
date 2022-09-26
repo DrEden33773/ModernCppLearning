@@ -2,16 +2,14 @@
   {
     "directory": "/home/eden/CppProjects/ModernCppLearning",
     "arguments": [
-      "/usr/bin/gcc",
+      "/home/linuxbrew/.linuxbrew/bin/gcc-12",
       "-c",
       "-m64",
-      "-fvisibility=hidden",
-      "-fvisibility-inlines-hidden",
-      "-O3",
+      "-g",
+      "-O0",
       "-std=gnu++23",
-      "-DNDEBUG",
       "-o",
-      "build/.objs/ModernCppLearning/linux/x86_64/release/src/main.cpp.o",
+      "build/.objs/ModernCppLearning/linux/x86_64/debug/src/main.cpp.o",
       "src/main.cpp"
     ],
     "file": "src/main.cpp"
