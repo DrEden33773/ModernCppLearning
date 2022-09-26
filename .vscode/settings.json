@@ -93,5 +93,8 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
+    },
+    "yaml.schemas": {
+        "https://json.schemastore.org/yamllint.json": "file:///home/eden/.config/clangd/config.yaml"
     }
 }
