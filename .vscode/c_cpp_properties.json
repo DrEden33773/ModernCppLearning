@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [],
+            "defines": [], // test
             "compilerPath": "/home/linuxbrew/.linuxbrew/bin/clang++",
             "intelliSenseMode": "linux-clang-x64",
             "cStandard": "c17",
