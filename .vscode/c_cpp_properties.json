@@ -5,11 +5,11 @@
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [], // test
+            "defines": [],
             "compilerPath": "/home/linuxbrew/.linuxbrew/bin/clang++",
             "intelliSenseMode": "linux-clang-x64",
-            "cStandard": "c17",
-            "cppStandard": "gnu++20"
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++23"
         }
     ],
     "version": 4
